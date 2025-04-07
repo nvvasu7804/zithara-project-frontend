@@ -1,8 +1,10 @@
-
 import axios from "axios";
 
-const axiosInstance = axios.create({
-  baseURL: "https://zithara-project-backend.onrender.com", // or your local/dev endpoint
+const instance = axios.create({
+  baseURL: "https://zithara-project-backend.onrender.com/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
-export default axiosInstance;
+export default instance;
